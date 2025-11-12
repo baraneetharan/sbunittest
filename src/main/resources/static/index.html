@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Products CRUD using Fetch API</h1>
+    <form action="javascript:void(0);" method="POST">
+        <input type="text" id="productname" placeholder="product name">
+        <input type="text" id="productcategory" placeholder="product category">
+        <input type="text" id="productprice" placeholder="product price">
+        <select id="productavailable">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <button type="submit" id="myBtn" onclick="saveORupdateItem()">Save</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="products"></tbody>
+    </table>
+
+    <script src="fetch.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>
